@@ -9,40 +9,55 @@ function App() {
   const [board, setBoard] = useState({});
   const [myTurn, setMyTurn] = useState(null);
   const [winMessage, setWinMessage] = useState("");
-
-  // const resetGame = () => {
-  //   setBoard({});
-  //   setMyTurn(null);
-  //   setWinMessage("");
-  // };
+  const [mySymbol, setMySymbol] = useState("");
+  const [gameRound, setGameRound] = useState(false);
 
   const handleSetBoard = (position, symbol) => {
+    console.log("handle set board", position, symbol);
     setBoard({ ...board, [position]: symbol });
   };
   const handleSetTurn = (bool) => {
     setMyTurn(bool);
   };
-  useEffect(() => {
-    gameBegin(setMyTurn);
-  }, []);
 
   useEffect(() => {
+    console.log(winMessage);
+  }, [winMessage]);
+  useEffect(() => {
+    setMySymbol(symbol);
+    gameBegin(setMyTurn, setWinMessage, setMySymbol);
+  }, []);
+
+  // useEffect(() => {
+  //   resetGame(setBoard, setMyTurn, setWinMessage);
+  // }, [gameRound]);
+
+  useEffect(() => {
+    console.log("THE BOARD", board);
+    // console.log(b)
     moveMade(myTurn, handleSetTurn, setWinMessage, board, handleSetBoard);
   }, [board]);
 
   return (
     <div className="App">
-      <Board board={board} handleSetBoard={handleSetBoard} myTurn={myTurn} />
+      <Board
+        symbol={mySymbol}
+        board={board}
+        handleSetBoard={handleSetBoard}
+        myTurn={myTurn}
+      />
       <div
         className="win-message-container"
         style={{
           display:
-            winMessage === "You won!" || winMessage === "You lost."
+            winMessage === "You won!" || winMessage === "You lost!"
               ? "flex"
               : "none",
         }}
       >
-        {/* <button onClick={() => resetGame()}>Reset</button> */}
+        {/* <button onClick={() => riseRound(setGameRound, gameRound)}>
+          Reset
+        </button> */}
         <h1 id="winMessage">{winMessage}</h1>
       </div>
     </div>
