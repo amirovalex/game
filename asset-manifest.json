@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/game/static/css/main.f207b322.css",
-    "main.js": "/game/static/js/main.f8e37846.js",
-    "static/js/787.6a541d2d.chunk.js": "/game/static/js/787.6a541d2d.chunk.js",
+    "main.css": "/game/static/css/main.397161ac.css",
+    "main.js": "/game/static/js/main.27c5f617.js",
+    "static/js/453.a5a72b74.chunk.js": "/game/static/js/453.a5a72b74.chunk.js",
+    "static/media/xElement.png": "/game/static/media/xElement.7094dd38f04ba2843df2.png",
+    "static/media/oElement.png": "/game/static/media/oElement.c4a4a06c66bc7062c4e0.png",
+    "static/media/websitebg.jpg": "/game/static/media/websitebg.7535ff13df2101d7a1bd.jpg",
     "static/media/xSymbol.svg": "/game/static/media/xSymbol.f5457199865cf8c177ab311219383786.svg",
-    "static/media/oSymbol.svg": "/game/static/media/oSymbol.6dc913a8a1aebbbd7e9504cf1c2baddc.svg",
     "index.html": "/game/index.html",
-    "main.f207b322.css.map": "/game/static/css/main.f207b322.css.map",
-    "main.f8e37846.js.map": "/game/static/js/main.f8e37846.js.map",
-    "787.6a541d2d.chunk.js.map": "/game/static/js/787.6a541d2d.chunk.js.map"
+    "static/media/oSymbol.svg": "/game/static/media/oSymbol.6dc913a8a1aebbbd7e9504cf1c2baddc.svg",
+    "main.397161ac.css.map": "/game/static/css/main.397161ac.css.map",
+    "main.27c5f617.js.map": "/game/static/js/main.27c5f617.js.map",
+    "453.a5a72b74.chunk.js.map": "/game/static/js/453.a5a72b74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f207b322.css",
-    "static/js/main.f8e37846.js"
+    "static/css/main.397161ac.css",
+    "static/js/main.27c5f617.js"
   ]
 }
