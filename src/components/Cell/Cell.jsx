@@ -12,8 +12,9 @@ const Cell = ({board,myTurn,cellId,handleSetBoard,symbol}) => {
         !board[cellId] && makeMove(cellSelected, cellId, myTurn,board, handleSetBoard,symbol)
         }
       }
-      className="cell">
-       {cellSelected}
+      className="cell bg-zinc-400/25 rounded-xl w-full h-full">
+       {cellSelected && <img src={`../../../public/${cellSelected === "X" ? "xElement.png" : "oElement.png"}`}/>}
+
     </div>
   );
 }

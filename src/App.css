@@ -1,8 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
   display: flex;
     align-items: center;
     justify-content: center;
+  background-image: url('../public/websitebg.jpg');
+  background-size: cover;
 }
 
 .App-logo {
@@ -53,4 +59,10 @@
       align-items: center;
       background: rgba(0, 0, 0, 0.5);
       color: white;
+}
+
+.blaka-regular {
+  font-family: "Blaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }

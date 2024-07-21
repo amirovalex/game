@@ -47,7 +47,7 @@ function App() {
         myTurn={myTurn}
       />
       <div
-        className="win-message-container"
+        className="win-message-container blaka-regular text-8xl" 
         style={{
           display:
             winMessage === "You won!" || winMessage === "You lost!"

@@ -1,5 +1,7 @@
 import { socket } from "../App";
 import xSymbol from "../assets/xSymbol.svg";
+import xElement from "../assets/xElement.png";
+import oElement from "../assets/oElement.png";
 import oSymbol from "../assets/oSymbol.svg";
 
 export let symbol;
@@ -50,10 +52,12 @@ export const moveMade = (
     handleSetBoard(data.position, data.symbol);
     let theDiv = document.getElementById(data.position);
     let symbolSvg = document.createElement("img");
-    symbolSvg.src =
-      data.symbol === "X" ? xSymbol : data.symbol === "O" && oSymbol;
-    symbolSvg.style.width = "50px";
-    symbolSvg.style.height = "50px";
+    symbolSvg.src = 
+    // symbolSvg.src = "../../../public/xElement.png";
+
+    data.symbol === "X" ? xElement : data.symbol === "O" && oElement;
+    // symbolSvg.style.width = "12rem";
+    // symbolSvg.style.height = "12rem";
     // theDiv.textContent = data.symbol;
     theDiv.replaceChildren(symbolSvg);
 

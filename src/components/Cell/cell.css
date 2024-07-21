@@ -16,13 +16,13 @@ const squareStyle= {
 
 .cell {
     display:flex;
-    background-color: #ddd;
-    margin:4px;
+    /* background-color: #ddd; */
     justify-content:center;
     align-items:center;
     color: #000;
-    border: 1px solid #000;
-    width: 30%;
     justify-content: center;
     align-items: center;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    /* background-size: cover; */
 }
