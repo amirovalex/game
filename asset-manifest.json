@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/game/static/css/main.397161ac.css",
-    "main.js": "/game/static/js/main.e6a71f08.js",
+    "main.css": "/game/static/css/main.e8266d71.css",
+    "main.js": "/game/static/js/main.376d065d.js",
     "static/js/453.a5a72b74.chunk.js": "/game/static/js/453.a5a72b74.chunk.js",
     "static/media/xElement.png": "/game/static/media/xElement.7094dd38f04ba2843df2.png",
     "static/media/oElement.png": "/game/static/media/oElement.c4a4a06c66bc7062c4e0.png",
+    "static/media/menubar.png": "/game/static/media/menubar.9c9cb20ab88488923904.png",
+    "static/media/cellbg2.jpg": "/game/static/media/cellbg2.4d399903e9e00f6fb62d.jpg",
     "static/media/websitebg.jpg": "/game/static/media/websitebg.7535ff13df2101d7a1bd.jpg",
+    "static/media/usflag.jpg": "/game/static/media/usflag.8dee0764866d6b79917c.jpg",
+    "static/media/germanyflag.jpg": "/game/static/media/germanyflag.9884fadf5e1c8978ce51.jpg",
     "static/media/xSymbol.svg": "/game/static/media/xSymbol.f5457199865cf8c177ab311219383786.svg",
     "index.html": "/game/index.html",
     "static/media/oSymbol.svg": "/game/static/media/oSymbol.6dc913a8a1aebbbd7e9504cf1c2baddc.svg",
-    "main.397161ac.css.map": "/game/static/css/main.397161ac.css.map",
-    "main.e6a71f08.js.map": "/game/static/js/main.e6a71f08.js.map",
+    "main.e8266d71.css.map": "/game/static/css/main.e8266d71.css.map",
+    "main.376d065d.js.map": "/game/static/js/main.376d065d.js.map",
     "453.a5a72b74.chunk.js.map": "/game/static/js/453.a5a72b74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.397161ac.css",
-    "static/js/main.e6a71f08.js"
+    "static/css/main.e8266d71.css",
+    "static/js/main.376d065d.js"
   ]
 }
