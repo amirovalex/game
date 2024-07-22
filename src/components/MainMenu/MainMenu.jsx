@@ -25,10 +25,10 @@ const MainMenu = ({}) => {
         </div>
         <div className="grid grid-cols-2 grid-rows-1 gap-2">
             <div className='p-6 cursor-pointer' onClick={((e) => handleServerSelect('us'))}>
-                <img src={usFlag} className="rounded-md" alt="usflag" />
+                <img src={usFlag} className="rounded-3xl" alt="usflag" />
             </div>
             <div className='p-6 cursor-pointer'>
-                <img src={germanyFlag} className="rounded-md" alt="germanyflag" onClick={((e) => handleServerSelect('de'))} />
+                <img src={germanyFlag} className="rounded-3xl" alt="germanyflag" onClick={((e) => handleServerSelect('de'))} />
             </div>
         </div>
     </div>
