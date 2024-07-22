@@ -24,10 +24,10 @@ const MainMenu = ({}) => {
        <div className="p-3 rounded-md blaka-regular text-xl sm:text-5xl md:text-6xl w-full server-select-title absolute ml-auto text-[#e3c79c] ">Select Server</div>
         </div>
         <div className="grid grid-cols-2 grid-rows-1 gap-2">
-            <div className='p-6 cursor-pointer' onClick={((e) => handleServerSelect('us'))}>
+            <div className='p-6 cursor-pointer rounded-md' onClick={((e) => handleServerSelect('us'))}>
                 <img src={usFlag} alt="usflag" />
             </div>
-            <div className='p-6 cursor-pointer'>
+            <div className='p-6 cursor-pointer rounded-md'>
                 <img src={germanyFlag} alt="germanyflag" onClick={((e) => handleServerSelect('de'))} />
             </div>
         </div>
