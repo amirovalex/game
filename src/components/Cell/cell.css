@@ -24,5 +24,6 @@ const squareStyle= {
     align-items: center;
     position: relative;
     aspect-ratio: 1 / 1;
-    /* background-size: cover; */
+    background-image: url('../../../public/cellbg2.jpg');
+    background-size: cover;
 }

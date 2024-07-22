@@ -15,18 +15,9 @@ const Board = ({board,handleSetBoard,myTurn,symbol}) => {
   }
 
   return (
-    <div className="board-container w-[95%] sm:w-4/5 lg:w-3/5 xl:w-5/12 max-w-5/12">
-      <div className="board bg-zinc-100/95 rounded-3xl pb-6 w-full">
-      <div className='blaka-regular text-[#392d36] text-xl sm:text-3xl md:text-4xl my-3 flex gap-2 w-[90%] justify-between items-center'>
-        <h1 className=''>{myTurn === null ? "Wait for another player to join" : myTurn ? "Your turn" : "Your opponent's turn"}</h1>
-        <p className=''>Round 1/2</p>
-
-      </div>
         <div className="game-board grid grid-rows-3 grid-cols-3 p-6 gap-6">
         {renderRows()}
         </div>
-      </div>
-    </div>
   );
 }
 

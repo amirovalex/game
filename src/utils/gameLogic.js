@@ -52,6 +52,7 @@ export const moveMade = (
     handleSetBoard(data.position, data.symbol);
     let theDiv = document.getElementById(data.position);
     let symbolSvg = document.createElement("img");
+    symbolSvg.className +=" absolute w-full h-full z-index-20"
     symbolSvg.src = 
     // symbolSvg.src = "../../../public/xElement.png";
 
@@ -59,7 +60,8 @@ export const moveMade = (
     // symbolSvg.style.width = "12rem";
     // symbolSvg.style.height = "12rem";
     // theDiv.textContent = data.symbol;
-    theDiv.replaceChildren(symbolSvg);
+    theDiv.appendChild(symbolSvg);
+
 
     if (data.symbol !== symbol) {
       setMyTurn(true);
@@ -116,10 +118,15 @@ export const makeMove = (
   });
 };
 
-// export const riseRound = (setGameRound, gameRound) => {
-//   socket.emit("reset.game");
-//   setGameRound(gameRound + 1);
-// };
+export const startGame = (server) => {
+  socket.emit('start.game', server);
+};
+
+export const riseRound = (setGameRound, gameRound) => {
+  console.log('gameRound', gameRound)
+  socket.emit("reset.game");
+  setGameRound(gameRound + 1);
+};
 
 // export const resetGame = (setBoard, setMyTurn, setWinMessage) => {
 //   socket.on("game.reseted", (data) => {
