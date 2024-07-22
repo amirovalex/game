@@ -6,7 +6,7 @@ import { gameBegin, moveMade, symbol,riseRound } from "./utils/gameLogic";
 import { useContext } from 'react';
 import { useUserProviderContext } from './providers/UserProvider.js';
 import MainMenu from "./components/MainMenu/MainMenu.jsx";
-export let socket = io(process.env.REACT_APP_BACKEND_URL);
+export let socket = io(process.env.REACT_APP_US_URL);
 console.log(useUserProviderContext)
 function App() {
   const [board, setBoard] = useState({});
