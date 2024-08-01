@@ -7,6 +7,8 @@ import { useContext } from 'react';
 import { useUserProviderContext } from './providers/UserProvider.js';
 import { useBoardProviderContext } from "./providers/BoardProvider.js";
 import MainMenu from "./components/MainMenu/MainMenu.jsx";
+import TopBar from "./components/TopBar/TopBar.jsx"
+import Footer from "./components/Footer/Footer.jsx"
 // export let socket = io(process.env.REACT_APP_US_URL);
 console.log(useUserProviderContext)
 function App() {
@@ -48,7 +50,8 @@ function App() {
   }, [board]);
 
   return (
-    <div className="App" onClick={ ((e) => winMessage !== "" && riseRound(setGameRound,gameRound,socket) )}>
+    <div className="App flex flex-col gap-6  justify-around" onClick={ ((e) => winMessage !== "" && riseRound(setGameRound,gameRound,socket) )}>
+      <TopBar/>
       <div className="board-container w-[95%] sm:w-4/5 lg:w-3/5 xl:w-5/12 max-w-5/12">
       <div className="board bg-zinc-100/95 rounded-3xl p-6 w-full">
       {gameState==="game" ? <div className='blaka-regular text-[#392d36] text-xl sm:text-3xl md:text-4xl flex gap-2 w-full justify-between items-center'>
@@ -56,7 +59,7 @@ function App() {
         <p className=''>Round 1/2</p>
       </div> :
       <div className='blaka-regular text-[#392d36] text-xl text-center sm:text-3xl md:text-4xl w-full'>
-        <h1>Hello User</h1>
+        {/* <h1 className="text-5xl">Hello User</h1> */}
         </div>}
         {gameState === "mainmenu" && 
           <MainMenu/>
@@ -70,6 +73,7 @@ function App() {
 
         </div>
       </div>
+      <Footer/>
       <div
         className="win-message-container blaka-regular text-8xl" 
         style={{

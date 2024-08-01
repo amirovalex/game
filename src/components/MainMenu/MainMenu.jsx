@@ -27,17 +27,20 @@ const MainMenu = ({}) => {
   }
 
   return (
-    <div className='flex flex-col w-full p-6'>
+    <div className='flex flex-col w-full sm:p-6 h-100 justify-evenly'>
         <div className='relative flex justify-center'>
         <img src={menuBar} height={200} alt="menubar"/>
-       <div className="p-3 rounded-md blaka-regular text-xl sm:text-5xl md:text-6xl w-full server-select-title absolute ml-auto text-[#e3c79c] ">Select Server</div>
+       <div className="p-3 rounded-md blaka-regular text-3xl sm:text-5xl md:text-6xl w-full server-select-title absolute ml-auto text-[#e3c79c]">Servers</div>
         </div>
-        <div className="grid grid-cols-2 grid-rows-1 gap-2">
-            <div className='p-6 cursor-pointer relative'>
+        <div className="flex flex-row flex-nowrap gap-2 pt-6 justify-center">
+            <div className='max-w-[200px]  sm:max-w-max sm:p-6 cursor-pointer relative flex flex-col'>
                 <img src={usFlag} className="rounded-3xl hover:scale-105 ease-linear" alt="usflag" onClick={((e) => handleServerSelect('us'))}/>
+                <span className='text-2xl blaka-regular'>0/250</span>
             </div>
-            <div className='p-6 cursor-pointer relative'>
+            <div className='max-w-[200px] sm:max-w-max sm:p-6 cursor-pointer relative flex flex-col'>
                 <img src={germanyFlag} className="rounded-3xl hover:scale-105 ease-linear" alt="germanyflag" onClick={((e) => handleServerSelect('de'))} />
+                <span className='text-2xl blaka-regular'>0/250</span>
+
             </div>
         </div>
     </div>

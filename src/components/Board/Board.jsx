@@ -15,7 +15,7 @@ const Board = ({board,handleSetBoard,myTurn,symbol}) => {
   }
 
   return (
-        <div className="game-board grid grid-rows-3 grid-cols-3 p-6 gap-6">
+        <div className="game-board grid grid-rows-3 grid-cols-3 sm:pt-3 gap-6">
         {renderRows()}
         </div>
   );

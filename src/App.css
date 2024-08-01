@@ -6,7 +6,7 @@
   text-align: center;
   display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
   background-image: url('../public/websitebg.jpg');
   background-size: cover;
 }
