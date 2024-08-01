@@ -1,9 +1,12 @@
-import { socket } from "../App";
+// import { socket } from "../App";
 import xSymbol from "../assets/xSymbol.svg";
 import xElement from "../assets/xElement.png";
 import oElement from "../assets/oElement.png";
 import oSymbol from "../assets/oSymbol.svg";
+// import { useUserProviderContext } from "../providers/UserProvider";
 
+// const userContext = useUserProviderContext();
+// const {socket} = userContext
 export let symbol;
 
 // const isGameOver = (board) => {
@@ -45,7 +48,8 @@ export const moveMade = (
   setMyTurn,
   setWinMessage,
   board,
-  handleSetBoard
+  handleSetBoard,
+  socket
 ) => {
   socket.on("move.made", (data) => {
     console.log("move made data", data);
@@ -82,7 +86,8 @@ export const moveMade = (
   });
 };
 
-export const gameBegin = (setMyTurn, setWinMessage, setMySymbol) => {
+export const matchingBegin = (setMyTurn, setWinMessage, setMySymbol,socket) => {
+  console.log('matching begin');
   socket.on("game.begin", (data) => {
     symbol = data.symbol;
     setMyTurn(symbol === "X");
@@ -99,7 +104,8 @@ export const makeMove = (
   myTurn,
   board,
   handleSetBoard,
-  symbol
+  symbol,
+  socket
 ) => {
   if (!myTurn) {
     return;
@@ -118,11 +124,11 @@ export const makeMove = (
   });
 };
 
-export const startGame = (server) => {
+export const startGame = (server,socket) => {
   socket.emit('start.game', server);
 };
 
-export const riseRound = (setGameRound, gameRound) => {
+export const riseRound = (setGameRound, gameRound,socket) => {
   console.log('gameRound', gameRound)
   socket.emit("reset.game");
   setGameRound(gameRound + 1);
