@@ -50,10 +50,10 @@ function App() {
   }, [board]);
 
   return (
-    <div className="App flex flex-col gap-6  justify-around" onClick={ ((e) => winMessage !== "" && riseRound(setGameRound,gameRound,socket) )}>
+    <div className="App flex flex-col gap-6 p-3 justify-around" onClick={ ((e) => winMessage !== "" && riseRound(setGameRound,gameRound,socket) )}>
       <TopBar/>
-      <div className="board-container w-[95%] sm:w-4/5 lg:w-3/5 xl:w-5/12 max-w-5/12">
-      <div className="board bg-zinc-100/95 rounded-3xl p-6 w-full">
+      <div className="board-container aspect-square w-full sm:w-auto sm:grow ">
+      <div className="board bg-zinc-100/95 rounded-3xl p-6">
       {gameState==="game" ? <div className='blaka-regular text-[#392d36] text-xl sm:text-3xl md:text-4xl flex gap-2 w-full justify-between items-center'>
         <h1 className=''>{myTurn === null ? "Wait for another player to join" : myTurn ? "Your turn" : "Your opponent's turn"}</h1>
         <p className=''>Round 1/2</p>
